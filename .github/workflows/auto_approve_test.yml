@@ -7,7 +7,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
-      name: development
+      name: automation
       # The protection rule must be configured in the GitHub UI for this environment
     steps:
       - name: Checkout code
