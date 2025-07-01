@@ -1,0 +1,20 @@
+name: Auto Approve Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: development
+      # The protection rule must be configured in the GitHub UI for this environment
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Simulate deployment
+        run: echo "Deploying to development environment..."
+
+      - name: Mark deployment as successful
+        run: echo "Deployment completed!"
